@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# Generated ETL outputs; preserve tracked example CSV
+*.db
+*.db-shm
+*.db-wal
+data/demo_inputs/
+data/*.sqlite
+
+# Local environment and IDE
+.env
+.vscode/
+.idea/
+.DS_Store
