@@ -23,6 +23,12 @@ py -3 -m venv .venv
 
 If `py` is unavailable, use `python -m venv .venv` for the first command.
 These instructions use the virtual environment's Python directly, so activation is unnecessary.
+Wait for installation to finish successfully before continuing. Verify the project and dashboard are available:
+
+```powershell
+.\.venv\Scripts\python.exe -m etl_monitor.cli --help
+.\.venv\Scripts\python.exe -m streamlit --version
+```
 
 ## 3. Generate demo data
 
@@ -78,6 +84,7 @@ Your database is saved locally; setup and demo generation do not need to be repe
 
 - **Python path is not recognized:** confirm you are in the folder containing `pyproject.toml`, then complete step 2 to create `.venv` there.
 - **No module named `etl_monitor` or `streamlit`:** repeat the installation command in step 2.
+- **Moved or copied the project folder:** repeat step 2 in the current folder. An editable installation points to the source folder where it was installed, so an installation from another copy of the project may not work here.
 - **No monitoring data appears:** run step 3, confirm the database field is `data/monitor.db`, then refresh the dashboard. A different working folder may require the full database path.
 - **Already have a database elsewhere?** Enter its full path in the dashboard. To write CLI results to that database too, put `--db` before the command and replace the example path below with your database's location:
 
