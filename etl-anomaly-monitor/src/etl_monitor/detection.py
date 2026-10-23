@@ -48,6 +48,7 @@ def detect_anomaly(metrics: dict, previous_runs: list[dict]) -> dict:
 
     detector = "quality_rules (model warming up)"
     anomaly_score: float | None = None
+    
     if len(healthy) >= MIN_HEALTHY_RUNS:
         training = np.array([[run[field] for field in FEATURES] for run in healthy], dtype=float)
         current = np.array([[metrics[field] for field in FEATURES]], dtype=float)
