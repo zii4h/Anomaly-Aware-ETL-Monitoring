@@ -1,4 +1,7 @@
-﻿# Run ETL Anomaly Monitor Locally
+# ETL Anomaly Monitor
+A Python-based monitoring tool that validates ETL data batches and detects anomalies in order records. It uses rule-based checks and Isolation Forest to flag data quality issues and unusual patterns. Results are tracked in SQLite and surfaced through a `Streamlit` dashboard.
+
+## Run Locally:
 - Python 3.10 or newer
 - Windows PowerShell
 
